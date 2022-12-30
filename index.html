@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JUSTINS WEBISTE</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav">
+        <div id="myLinks">
+          <a href="#ABOUT">About</a>
+          <a href="#PROJECT">Projects</a>
+          <a href="#CONTACT">Contact</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <div class="gnav-btn">
+            <div class="gnav-btn-item gnav-btn-close">
+              <img class=".hbg" src="photos/hbg.png" alt="MENU" />
+              <img src="photos/gnav-btn.png" alt="" />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div id="ABOUT" class="about">
+        <div class="about-me-details">
+          <div class="row">
+            <div class="col about-me-desc">
+              <h1 class="about-me-desc-name">Justin Jay</h1>
+              <p class="about-me-desc-para">
+                An enthusiastic web designer that wants to create websites fit
+                for this industry as well as gain and learn knowledge by
+                browsing the web exploring the creative capabilities of the many
+                different way’s you can approach to creating one.
+              </p>
+            </div>
+            <div class="col about-me-desc">
+              <img class="me-img" src="photos/me.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="design" id="PROJECT">
+      <div class="container-sect">
+        <span class="design-corner"> </span>
+        <div class="projects">
+          <h2 class="h2-title">Projects</h2>
+          <div class="project-details">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <a href="https://jjaaaayyyy.github.io/" target="_blank">
+                    <div class="swiper-slide-inner">
+                      <p class="slide-thumb">
+                        <img src="photos/1stportfolio.png" alt="" />
+                      </p>
+                      <div class="slide-text">
+                        <p class="slide-title">First Portfolio</p>
+                        <p class="slide-desc">
+                          A portfolio made with HTML, CSS and BootStrap
+                        </p>
+                      </div>
+                      <div class="tech-stack">
+                        <p class="tech-item">HTML</p>
+                        <p class="tech-item">CSS</p>
+                        <p class="tech-item">BootStrap</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://jjaaaayyyy.github.io/" target="_blank">
+                    <div class="swiper-slide-inner">
+                      <p class="slide-thumb">
+                        <img src="photos/1stportfolio.png" alt="" />
+                      </p>
+                      <div class="slide-text">
+                        <p class="slide-title">First Portfolio</p>
+                        <p class="slide-desc">
+                          A portfolio made with HTML, CSS and BootStrap
+                        </p>
+                      </div>
+                      <div class="tech-stack">
+                        <p class="tech-item">HTML</p>
+                        <p class="tech-item">CSS</p>
+                        <p class="tech-item">BootStrap</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="CONTACT">
+      <div class="container-contact">
+        <h2 class="h2-title">Contact</h2>
+        <a href="mailto:justin_jay_cabonce@yahoo.com">
+          <div class="contact-card"></div
+        ></a>
+      </div>
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+      /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        slidesPerView: 3,
+        spaceBetween: 30,
+        direction: "horizontal",
+        grabCursor: true,
+        freeMode: true,
+        loop: false,
+
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+    <script>
+      // Get the button:
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+  </body>
+</html>
